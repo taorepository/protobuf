@@ -1,0 +1,35 @@
+//Person.proto
+syntax = "proto3";
+//https://blog.csdn.net/qq_36372507/article/details/79256050?utm_source=blogxgwz9
+import  "BaseProto.proto";
+
+package person;
+option java_package = "com.github.xjs.protobuffdemo.nano";
+option java_outer_classname = "PersonProto";
+//option java_multiple_files = true;
+//option java_generic_services = true;
+//option optimize_for = SPEED;
+message Person{
+  enum PhoneType{ //枚举类型
+    option allow_alias = true; //允许设置别名，意味着等号后面的数字（标记数字）可以重复
+    HOME=0;
+    MOBILE=1;
+    WORK=2; //实际上只是为同一个值增加了一个别名，生成代码后的格式是work = company
+    COMPANY =2;
+  }
+
+  message china{
+    int64 area = 1;
+    string money = 2;
+    PhoneType type =3;
+  }
+  repeated string position = 7; //由于repeated关键字修饰，这个属性将会生成一个集合
+  string name = 1;
+  int32 age = 2;
+  int32 id = 3;
+  string email = 4;
+  china nation = 5;
+  map<string,string> address=8; //map类型的key不能是枚举类型(enum)
+
+  baseproto.MsgBaseData baseProto = 6;
+}

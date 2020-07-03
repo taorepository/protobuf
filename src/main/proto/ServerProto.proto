@@ -1,0 +1,16 @@
+syntax = "proto3";
+package ServerProto.proto;
+//import GameProto.proto; // 引入GameProto.proto
+import public "MessageProto.proto";
+option java_package = "com.github.xjs.protobuffdemo.nano";
+option java_outer_classname = "ServerProto";
+message ServerWeaponData
+{
+  string guid = 1;
+  int32 playerID = 2;
+  string accountName = 3;
+  int32 weaponID = 4;
+  int32 weaponLv = 5;
+  int32 slotID = 6;
+  GameProto.MsgWeaponSkillData skillData = 7; // 需要加上包名GameProto
+}

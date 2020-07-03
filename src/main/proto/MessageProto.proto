@@ -1,0 +1,13 @@
+syntax = "proto3";
+package GameProto;
+//import BaseProto.proto; // 引入BaseProto.proto
+//    import BaseProto;
+import public "BaseProto.proto";
+option java_package = "com.github.xjs.protobuffdemo.nano";
+option java_outer_classname = "MessageProto";
+message MsgWeaponSkillData
+{
+  int32 skillID = 1;
+  int32 curExp = 2;
+  int32 maxExp = 3;
+}

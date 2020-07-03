@@ -1,0 +1,7 @@
+syntax = "proto3";
+package baseproto;
+option java_package = "com.github.xjs.protobuffdemo.nano";
+option java_outer_classname = "BaseProto";
+message MsgBaseData{
+  int32 object = 1;
+}

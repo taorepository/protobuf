@@ -8,7 +8,7 @@
     <artifactId>untitled</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <protobuf-java.version>3.5.1</protobuf-java.version>
+        <protobuf-java.version>3.16.3</protobuf-java.version>
         <protobuf-javanano.version>3.1.0</protobuf-javanano.version>
     </properties>
     <!--先添加依赖包，我们选择生成javanano格式的代码，当然你也可以选择生成grpc格式的代码，javanano是protobuf-maven-plugin原生支持的，所有支持的原生的代码格式：java,avanano,js,csharp,cpp,python,descriptor-set-->
